@@ -9,11 +9,17 @@ Profit margin	5%
 	
 Model Structure:
 •	Assumptions – contains product inputs (issue age, term length, face amount, risk class) and financial assumptions (interest rate, expenses, profit margin)
+
 •	Mortality – stores the four tables and retrieves rates based on risk class, issue age, and policy duration
+
 •	Pricing model – performs calculations for the annuity factor, premiums, profits, and reserves
+
 •	Sensitivity – shows graphics for gross premium based on risk class and issue age, reserve profile for a policyholder, and the effect of profit margin and expense load on gross monthly premium
+
 •	Simulation – performs a Monte Carlo simulation, assuming interest rate ~ N(.05,.012) and mortality load ~ N(1,.12) 
+
 Example scenario: For a 35-year-old non-smoking male with a $500,000 20-year term policy , the gross annual premium is: $697.16, and each policy is expected to net $454.28 In present value profit.
+
 
 Methodology:
 •	Mortality: rates are sourced from the 2015 VBT select and ultimate tables, age nearest birthday. A 25-year select period is used, after which ultimate rates apply. Four different tables are used based on the policyholder’s demographic.
